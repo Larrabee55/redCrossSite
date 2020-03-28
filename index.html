@@ -5,44 +5,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="./css/style.css" rel="stylesheet" type="text/css">
   <title>Red Cross Info</title>
 </head>
 
 <body>
   <div class="container">
 
-    <div class="row">
-      <div class="col-md-4 text-center">
-        <img src="./images/installation.jpeg" width="100%">
-      </div>
-      <div class="col-md-4 text-center">
-        <img src="./images/Workers.JPG" width="100%">
-      </div>
-      <div class="col-md-4 text-center">
-        <img src="./images/installinfSmokeAlarm.JPG" width="100%">
-      </div>
+    <div class="row" id="pictures">
+
+      <img src="./images/installation.jpeg" width="33.3%">
+
+      <img src="./images/Workers.JPG" width="33.3%">
+
+      <img src="./images/installinfSmokeAlarm.JPG" width="33.3%">
+
     </div>
-    <br>
+
 
     <!-- logo -->
-    <div class="row">
+    <div class="row p-4" id="logo">
       <div class="col-md-12 text-center">
-        <h1>LOGO</h1>
+        <img src="./images/redcross-logo.png">
       </div>
     </div>
+
 
     <!-- Message -->
-    <div class="row">
-      <div class="col-md-12">
-        <h4>COVID-19 UPDATE: You can request a smoke alarm installation, however, we are temporarily suspending the
-          scheduling of appointments until public health conditions improve.</h4>
+    <div class="row p-4" id="message">
+      <div class="col-md-12 text-center">
+        <h4 id="RedCrossBlack">COVID-19 UPDATE: You can request a smoke alarm installation, however, we are temporarily
+          suspending the scheduling of appointments until public health conditions improve.</h4>
       </div>
     </div>
-    <br>
+
 
     <!-- about -->
-    <div class="row">
-      <div class="col-md-12">
+    <div class="row shadow-lg" id="textInfo">
+      <div class="col-md-12 p-4">
         <p>Home fires claim seven lives every day but having working smoke alarms can cut the risk of death by half. The
           American Red Cross aims reduce home fire deaths and injuries in the United States by 25 percent over five
           years
@@ -51,15 +51,15 @@
           information. Please fill out the form below to schedule your FREE installation.</p>
         <p>***This form can accept requests from the following states and counties: UT, NV, Uinta County WY, Lincoln
           County WY, Mohave County AZ.***</p>
-        <p><b>To learn more about the Home Fire Campaign, please visit: <a
+        <p id="RedCrossBlack"><b>To learn more about the Home Fire Campaign, please visit: <a
               href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/fire/prevent-home-fire.html"
               target="_blank">redcross.org/homefires</a></b></p>
       </div>
     </div>
-    <br>
+
 
     <!-- form -->
-    <div class="row">
+    <div class="row p-4 shadow-lg" id="formInput">
       <div class="col-md-12">
         <form>
           <div class="form-row">
@@ -112,11 +112,40 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row p-4 shadow-lg" id="HFCImpacts">
       <div class="col-md-12 text-center">
-        <img src="./images/HFC Impacts to date.png">
+        <img src="./images/HFC Impacts to date.png" width="100%">
       </div>
     </div>
+
+
+    <div class="row p-4" id="HowToGetInvolved">
+      <div class="col-md-12 text-center">
+        <h1 id="RedCrossBlack"><b>How You Can Get Involved</b></h1>
+        <h3 id="RedCrossGrey">Join us for a rewarding day at a Sound the Alarm event near you and invite others to
+          sponsor your commitment
+          to help save lives.</h3>
+      </div>
+    </div>
+
+    <div class="row p-5" id="HowToGetInvolved">
+      <div class="col-md-4 text-center">
+        <h3 id="RedCrossBlack"><b>Volunteer</b></h3>
+        <p>Volunteer to install smoke alarms in your community.</p>
+        <button type="button" class="btn" id="HTGIbuttons"><b>FIND AN EVENT</b></button>
+      </div>
+      <div class="col-md-4 text-center">
+        <h3 id="RedCrossBlack"><b>Fundraise</b></h3>
+        <p>Fundraise on Facebook to help <i>Sound the Alarm.</i></p>
+        <button type="button" class="btn" id="HTGIbuttons"><b>START A FUNDRAISER</b></button>
+      </div>
+      <div class="col-md-4 text-center">
+        <h3 id="RedCrossBlack"><b>Donate</b></h3>
+        <p>Donate to support home fire relief and help save lives.</p>
+        <button type="button" class="btn" id="HTGIbuttons"><b>DONATE NOW</b></button>
+      </div>
+    </div>
+
   </div>
 </body>
 
