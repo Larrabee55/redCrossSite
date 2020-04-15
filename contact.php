@@ -21,11 +21,11 @@
 		$protocol = 'http://';
 	
 	  // Required fields
-    if( empty( $_POST['FirstName'] ) || empty( $_POST['lastName'] ) || empty( $_POST['phoneNumber'] ) || empty( $_POST['email'] ) || 
+    if( empty( $_POST['firstName'] ) || empty( $_POST['lastName'] ) || empty( $_POST['phoneNumber'] ) || empty( $_POST['email'] ) || 
     empty( $_POST['address'] ) || empty( $_POST['city'] ) || empty( $_POST['state'] ) || empty( $_POST['zipCode'] ) ){
 		$error .= 'Missing required field .\n';
 	  }
-	  else if( ! filter_var( $_POST['contact_email'], FILTER_VALIDATE_EMAIL ) ) {
+	  else if( ! filter_var( $_POST['email'], FILTER_VALIDATE_EMAIL ) ) {
 		$error .= 'Email is invalid.\n';
 	  }
 	

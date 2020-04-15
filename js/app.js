@@ -5,12 +5,12 @@ $('#schedule').click(function () {
     case "89415": case "89420": case "89422": case "89427": case "89429": case "89428": case "89430": case "89444": case "89409": case "89447": case "89403": case "89701": case "89702": case "89703": case "89705": case "89706": case "89711": case "89712": case "89713": case "89714": case "89721": case "89448": case "89411": case "89410": case "89449": case "89705": case "89460": case "89423": case "89437": case "89440": case "89509": case "89511": case "89510": case "89513": case "89512": case "89523": case "89521": case "89402": case "89405": case "89557": case "89595": case "89704": case "89412": case "89424": case "89433": case "89434": case "89436": case "89439": case "89442": case "89450": case "89451": case "89502": case "89501": case "89504": case "89519": case "89441": case "89506": case "89508": case "89446": case "89426": case "89445": case "89438": case "89404": case "89425": case "89418": case "89419": case "89406": case "89407": case "89496": case "89310": case "89820": case "89316": case "89821": case "89801": case "89802": case "89803": case "89815": case "89822": case "89823": case "89825": case "89826": case "89828": case "89830": case "89831": case "89832": case "89833": case "89834": case "89835": case "89883": case "89301": case "89311": case "89314": case "89315": case "89317": case "89318": case "89319":
       chapter = "NorthernNevada";
       console.log(chapter);
-      $("#chapterScheduling").append("<div class='form-group'><label for='DayOfTheWeek'>Day Of The Week</label><select class='form-control' id='DayOfTheWeek'><option value='Wednesday'>Wednesday</option><option value='Thursday'>" +
+      $("#chapterScheduling").append("<div class='form-group'><label for='dayOfWeek'>Day Of The Week</label><select class='form-control' id='dayOfWeek'><option value='Wednesday'>Wednesday</option><option value='Thursday'>" +
         "Thursday</option><option value='Friday'>Friday</option></select></div><div class='form-group'><label " +
-        "for='TimeofDay'>Time</label><select class='form-control' id='TimeofDay'><option>9:30 AM</option><option>10:00 AM" +
+        "for='time'>Time</label><select class='form-control' id='time'><option>9:30 AM</option><option>10:00 AM" +
         "</option><option>10:30 AM</option><option>11:00 AM</option><option>11:30 AM</option><option>12:00 PM</option>" +
         "<option>12:30 PM</option></select></div>");
-      $("#submitFooter").append("<button type='submit' class='btn btn-primary'>Sumbit</button>");
+      $("#submitFooter").append("<button id='submit' type='submit' class='btn btn-primary'>Sumbit</button>");
       break;
 
     case "89005": case "89007": case "89012": case "89011": case "89014": case "89015": case "89018": case "89019": case "89021": case "89025": case
@@ -26,11 +26,11 @@ $('#schedule').click(function () {
       "89023": case "89041": case "89045": case "89048": case "89049": case "89060": case "89003": case "89010": case "89013": case "89047":
       var chapter = "SouthernNevada";
       console.log(chapter);
-      $("#chapterScheduling").append("<div class='form-group'><label for='DayOfTheWeek'>Day Of The Week</label><select class='form-control' id='DayOfTheWeek'><option value='Monday'>Monday</option><option value='Wednesday'>Wednesday</option></select></div><div class='form-group'><label " +
-        "for='TimeofDay'>Time</label><select class='form-control' id='TimeofDay'><option>9:00 AM</option><option>9:30 AM</option><option>10:00 AM" +
+      $("#chapterScheduling").append("<div class='form-group'><label for='dayOfWeek'>Day Of The Week</label><select class='form-control' id='dayOfWeek'><option value='Monday'>Monday</option><option value='Wednesday'>Wednesday</option></select></div><div class='form-group'><label " +
+        "for='time'>Time</label><select class='form-control' id='time'><option>9:00 AM</option><option>9:30 AM</option><option>10:00 AM" +
         "</option><option>10:30 AM</option><option>11:00 AM</option><option>11:30 AM</option><option>12:00 PM</option>" +
         "<option>12:30 PM</option><option>1:00 PM</option><option>1:30 PM</option></select></div>");
-      $("#submitFooter").append("<button type='submit' class='btn btn-primary'>Sumbit</button>");
+      $("#submitFooter").append("<button id='submit' type='submit' class='btn btn-primary'>Sumbit</button>");
       break;
 
     case "84028": case "84038": case "84064": case "84086": case "84304": case "84305": case "84308": case "84318": case "84319": case "84320": case
@@ -46,20 +46,20 @@ $('#schedule').click(function () {
       var chapter = "NorthernUtah";
       console.log(chapter);
       $("#chapterScheduling").append("<div class='form-group'>" +
-        "<label for='DayOfTheWeek'> Day Of The Week</label>" +
-        "<select class='form-control' id='DayOfTheWeek'>" +
+        "<label for='dayOfWeek'> Day Of The Week</label>" +
+        "<select class='form-control' id='dayOfWeek'>" +
         "<option selected>Choose...</option>" +
         "<option value='Wednesday'>Wednesday</option>" +
         "<option value='Saturday'>Saturday</option>" +
         "</select></div>");
-      $("#DayOfTheWeek").change(function () {
-        var DayOfTheWeek = $("#DayOfTheWeek").val();
-        console.log(DayOfTheWeek);
-        if (DayOfTheWeek == "Wednesday") {
+      $("#dayOfWeek").change(function () {
+        var dayOfWeek = $("#dayOfWeek").val();
+        console.log(dayOfWeek);
+        if (dayOfWeek == "Wednesday") {
           $("#time").remove();
           $("#chapterScheduling").append("<div class='form-group' id='time'>" +
-            "<label for='TimeofDay'>Time</label>" +
-            "<select class='form-control' id='TimeofDay'>" +
+            "<label for='time'>Time</label>" +
+            "<select class='form-control' id='time'>" +
             "<option value='5:30 PM'>5:30 PM</option>" +
             "<option value='6:00 PM'>6:00 PM</option>" +
             "<option value='6:30 PM'>6:30 PM</option> " +
@@ -68,11 +68,11 @@ $('#schedule').click(function () {
             "<option value='8:00 PM'>8:00 PM</option>" +
             "<option value='8:30 PM'>8:30 PM</option> " +
             "</select></div>");
-        } else if (DayOfTheWeek == "Saturday") {
+        } else if (dayOfWeek == "Saturday") {
           $("#time").remove();
           $("#chapterScheduling").append("<div class='form-group' id='time'>" +
-            "<label for='TimeofDay'>Time</label>" +
-            "<select class='form-control' id='TimeofDay'>" +
+            "<label for='time'>Time</label>" +
+            "<select class='form-control' id='time'>" +
             "<option value='9:30 AM'>9:30 AM</option>" +
             "<option value='10:00 AM'>10:00 AM</option>" +
             "<option value='10:30 AM'>10:30 AM</option>" +
@@ -86,7 +86,7 @@ $('#schedule').click(function () {
           alert("fuck")
         }
       });
-      $("#submitFooter").append("<button type='submit' class='btn btn-primary'>Sumbit</button>");
+      $("#submitFooter").append("<button id='submit' type='submit' class='btn btn-primary'>Sumbit</button>");
       break;
 
     case "84022": case "84029": case "84034": case "84069": case "84071": case "84074": case "84080": case "84083": case "84006": case "84009"
@@ -104,20 +104,20 @@ $('#schedule').click(function () {
       var chapter = "GreaterSaltLakeArea";
       console.log(chapter);
       $("#chapterScheduling").append("<div class='form-group'>" +
-        "<label for='DayOfTheWeek'> Day Of The Week</label>" +
-        "<select class='form-control' id='DayOfTheWeek'>" +
+        "<label for='dayOfWeek'> Day Of The Week</label>" +
+        "<select class='form-control' id='dayOfWeek'>" +
         "<option selected>Choose...</option>" +
         "<option value='Thursday'>Thursday</option>" +
         "<option value='Saturday'>Saturday</option>" +
         "</select></div>");
-      $("#DayOfTheWeek").change(function () {
-        var DayOfTheWeek = $("#DayOfTheWeek").val();
-        console.log(DayOfTheWeek);
-        if (DayOfTheWeek == "Thursday") {
+      $("#dayOfWeek").change(function () {
+        var dayOfWeek = $("#dayOfWeek").val();
+        console.log(dayOfWeek);
+        if (dayOfWeek == "Thursday") {
           $("#time").remove();
           $("#chapterScheduling").append("<div class='form-group' id='time'>" +
-            "<label for='TimeofDay'>Time</label>" +
-            "<select class='form-control' id='TimeofDay'>" +
+            "<label for='time'>Time</label>" +
+            "<select class='form-control' id='time'>" +
             "<option value='5:30 PM'>5:30 PM</option>" +
             "<option value='6:00 PM'>6:00 PM</option>" +
             "<option value='6:30 PM'>6:30 PM</option> " +
@@ -126,11 +126,11 @@ $('#schedule').click(function () {
             "<option value='8:00 PM'>8:00 PM</option>" +
             "<option value='8:30 PM'>8:30 PM</option> " +
             "</select></div>");
-        } else if (DayOfTheWeek == "Saturday") {
+        } else if (dayOfWeek == "Saturday") {
           $("#time").remove();
           $("#chapterScheduling").append("<div class='form-group' id='time'>" +
-            "<label for='TimeofDay'>Time</label>" +
-            "<select class='form-control' id='TimeofDay'>" +
+            "<label for='time'>Time</label>" +
+            "<select class='form-control' id='time'>" +
             "<option value='9:30 AM'>9:30 AM</option>" +
             "<option value='10:00 AM'>10:00 AM</option>" +
             "<option value='10:30 AM'>10:30 AM</option>" +
@@ -141,7 +141,7 @@ $('#schedule').click(function () {
           alert("fuck")
         }
       });
-      $("#submitFooter").append("<button type='submit' class='btn btn-primary'>Sumbit</button>");
+      $("#submitFooter").append("<button id='submit' type='submit' class='btn btn-primary'>Sumbit</button>");
       break;
 
     case "84003": case "84004": case "84005": case "84013": case "84042": case "84043": case "84045": case "84057": case "84058": case "84059"
@@ -158,20 +158,20 @@ $('#schedule').click(function () {
       var chapter = "CentralUtah";
       console.log(chapter);
       $("#chapterScheduling").append("<div class='form-group'>" +
-        "<label for='DayOfTheWeek'> Day Of The Week</label>" +
-        "<select class='form-control' id='DayOfTheWeek'>" +
+        "<label for='dayOfWeek'> Day Of The Week</label>" +
+        "<select class='form-control' id='dayOfWeek'>" +
         "<option selected>Choose...</option>" +
         "<option value='Wednesday'>Wednesday</option>" +
         "<option value='Saturday'>Saturday</option>" +
         "</select></div>");
-      $("#DayOfTheWeek").change(function () {
-        var DayOfTheWeek = $("#DayOfTheWeek").val();
-        console.log(DayOfTheWeek);
-        if (DayOfTheWeek == "Wednesday") {
+      $("#dayOfWeek").change(function () {
+        var dayOfWeek = $("#dayOfWeek").val();
+        console.log(dayOfWeek);
+        if (dayOfWeek == "Wednesday") {
           $("#time").remove();
           $("#chapterScheduling").append("<div class='form-group' id='time'>" +
-            "<label for='TimeofDay'>Time</label>" +
-            "<select class='form-control' id='TimeofDay'>" +
+            "<label for='time'>Time</label>" +
+            "<select class='form-control' id='time'>" +
             "<option value='5:30 PM'>5:30 PM</option>" +
             "<option value='6:00 PM'>6:00 PM</option>" +
             "<option value='6:30 PM'>6:30 PM</option> " +
@@ -180,11 +180,11 @@ $('#schedule').click(function () {
             "<option value='8:00 PM'>8:00 PM</option>" +
             "<option value='8:30 PM'>8:30 PM</option> " +
             "</select></div>");
-        } else if (DayOfTheWeek == "Saturday") {
+        } else if (dayOfWeek == "Saturday") {
           $("#time").remove();
           $("#chapterScheduling").append("<div class='form-group' id='time'>" +
-            "<label for='TimeofDay'>Time</label>" +
-            "<select class='form-control' id='TimeofDay'>" +
+            "<label for='time'>Time</label>" +
+            "<select class='form-control' id='time'>" +
             "<option value='9:30 AM'>9:30 AM</option>" +
             "<option value='10:00 AM'>10:00 AM</option>" +
             "<option value='10:30 AM'>10:30 AM</option>" +
@@ -195,7 +195,7 @@ $('#schedule').click(function () {
           alert("fuck")
         }
       });
-      $("#submitFooter").append("<button type='submit' class='btn btn-primary'>Sumbit</button>");
+      $("#submitFooter").append("<button id='submit' type='submit' class='btn btn-primary'>Sumbit</button>");
       break;
 
     case "84713": case "84731": case "84751": case "84752": case "84714": case "84719": case "84720": case "84721": case "84742": case "84753"
@@ -206,7 +206,7 @@ $('#schedule').click(function () {
       : case "89001": case "89008": case "89017": case "89043": case "89042": case "89027": case "89034": case "86021": case "86022": case "86052":
       var chapter = "SouthernUtah";
       console.log(chapter);
-      $("#chapterScheduling").append("<div class='form-group'><label for='DayOfTheWeek'>Day Of The Week</label><select class='form-control' id = 'DayOfTheWeek'>" +
+      $("#chapterScheduling").append("<div class='form-group'><label for='dayOfWeek'>Day Of The Week</label><select class='form-control' id = 'dayOfWeek'>" +
         "<option value='Monday'>Monday</option>" +
         "<option value='Tuesday'>Tuesday</option>" +
         "<option value='Wednesday'>Wednesday</option>" +
@@ -214,8 +214,8 @@ $('#schedule').click(function () {
         "<option value='Friday'>Friday</option>" +
         "<option value='Saturday'>Saturday</option></select></div>" +
         "<div class='form-group'>" +
-        "<label for='TimeofDay'>Time</label>" +
-        "<select class='form-control' id='TimeofDay'>" +
+        "<label for='time'>Time</label>" +
+        "<select class='form-control' id='time'>" +
         "<option value='9:00 AM'>9:00 AM</option>" +
         "<option value='9:30 AM'>9:30 AM</option>" +
         "<option value='10:00 AM'>10:00 AM</option>" +
@@ -234,7 +234,7 @@ $('#schedule').click(function () {
         "<option value='4:30 PM'>4:30 PM</option>" +
         "<option value='5:00 PM'>5:00 PM</option>" +
         "</select></div>");
-      $("#submitFooter").append("<button type='submit' class='btn btn-primary'>Sumbit</button>");
+      $("#submitFooter").append("<button id='submit' type='submit' class='btn btn-primary'>Sumbit</button>");
       break;
 
     default:
@@ -242,7 +242,105 @@ $('#schedule').click(function () {
       break;
   }
 });
+
 $("#closeModal").on("click", function () {
   $("#chapterScheduling").empty();
   $("#submitFooter").empty();
+});
+
+$("#submit").on("click", function (e) {
+  e.preventDefault();
+
+  var firstName = $("#firstName").val(),
+    lastName = $("#lastName").val(),
+    phoneNumber = $("#phoneNumber").val(),
+    email = $("#email").val(),
+    address = $("#address").val(),
+    address2 = $("#address2").val(),
+    city = $("#city").val(),
+    state = $("#state").val(),
+    zipCode = $("#zipCode").val(),
+    dayOfWeek = $("#dayOfWeek").val(),
+    time = $("#time").val(),
+    _action = $("#infoAndScheduling").attr('action'),
+    _method = $("#infoAndScheduling").attr('method'),
+    _err = false;
+
+  if (firstName == '') {
+    $("#firstName").addClass('err');
+    var _err = true;
+  }
+
+  if (lastName == '') {
+    $("#lastName").addClass('err');
+    var _err = true;
+  }
+
+  if (phoneNumber == '') {
+    $("#phoneNumber").addClass('err');
+    var _err = true;
+  }
+
+  if (email == '') {
+    $("#email").addClass('err');
+    var _err = true;
+  }
+
+  if (address == '') {
+    $("#address").addClass('err');
+    var _err = true;
+  }
+
+  if (address2 == '') {
+    $("#address2").addClass('err');
+    var _err = true;
+  }
+
+  if (city == '') {
+    $("#city").addClass('err');
+    var _err = true;
+  }
+
+  if (state == '') {
+    $("#state").addClass('err');
+    var _err = true;
+  }
+
+  if (zipCode == '') {
+    $("#zipCode").addClass('err');
+    var _err = true;
+  }
+
+  if (dayOfWeek == '') {
+    $("#dayOfWeek").addClass('err');
+    var _err = true;
+  }
+
+  if (time == '') {
+    $("#time").addClass('err');
+    var _err = true;
+  }
+
+  if (_err === true) {
+    return false;
+  }
+
+  $("#submit").button('loading');
+
+  $.ajax({
+    url: _action,
+    data: { ajax: "true", action: 'email_send', firstName: firstName, lastName: lastName, phoneNumber: phoneNumber, email: email, address: address, address2: address2, city: city, state: state, zipCode: zipCode, dayOfWeek: dayOfWeek, time: time },
+    type: _method,
+    error: function (XMLHttpRequest, textStatus, errorThrown) {
+      alert('Server Internal Error');
+    },
+
+    success: function (data) {
+      data = data.trim();
+
+      $("#firstName, #lastName, #phoneNumber, #email, #address, #address2, #city, #state, #zipCode, #dayOfWeek, #time").val('');
+    }
+  })
+
+
 });
