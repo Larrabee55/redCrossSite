@@ -3,12 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="shortcut icon" href="#" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
   <link href="./css/style.css" rel="stylesheet" type="text/css">
 
-  <title>Red Cross Info</title>
+  <title>Free Smoke Alarm</title>
 </head>
 
 <body>
@@ -16,11 +17,11 @@
 
     <div class="row" id="pictures">
 
-      <img src="./images/installation.jpeg" width="33.3%">
+      <img src="./images/installation.jpeg" width="33.3%" height="100%">
 
-      <img src="./images/Workers.JPG" width="33.3%">
+      <img src="./images/Workers.JPG" width="33.3%" height="100%">
 
-      <img src="./images/installinfSmokeAlarm.JPG" width="33.3%">
+      <img src="./images/installinfSmokeAlarm.JPG" width="33.3%" height="100%">
 
     </div>
 
@@ -73,14 +74,14 @@
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="FirstName" required>Nombre De Pila</label>
-              <input type="text" value="" class="form-control" id="firstName" required>
+              <input type="text" value="" class="form-control" id="firstName" name="firstName" required>
               <div class="invalid-feedback">
                 Please enter Name
               </div>
             </div>
             <div class="form-group col-md-6">
               <label for="LastName">El Apellido</label>
-              <input type="text" value="" class="form-control" id="lastName" required>
+              <input type="text" value="" class="form-control" id="lastName" name="lastName" required>
               <div class="invalid-feedback">
                 Please enter Last Name
               </div>
@@ -89,14 +90,14 @@
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="phoneNumber">Número de teléfono</label>
-              <input type="phoneNumber" value="" class="form-control" id="phoneNumber" required>
+              <input type="phoneNumber" value="" class="form-control" id="phoneNumber" name="phoneNumber" required>
               <div class="invalid-feedback">
                 Please enter Phone number
               </div>
             </div>
             <div class="form-group col-md-6">
               <label for="Email">Correo Electrónico</label>
-              <input type="Email" value="" class="form-control" id="email" required>
+              <input type="Email" value="" class="form-control" id="email" name="email" required>
               <div class="invalid-feedback">
                 Please enter Email
               </div>
@@ -104,26 +105,28 @@
           </div>
           <div class="form-group">
             <label for="Address">Dirección</label>
-            <input type="text" value="" class="form-control" id="address" placeholder="1234 Main St" required>
+            <input type="text" value="" class="form-control" id="address" name="address" placeholder="1234 Main St"
+              required>
             <div class="invalid-feedback">
               Please enter Address
             </div>
           </div>
           <div class="form-group">
             <label for="Address2">Dirección 2</label>
-            <input type="text" value="" class="form-control" id="address2" placeholder="Apartment, studio, or floor">
+            <input type="text" value="" class="form-control" id="address2" name="address2"
+              placeholder="Apartment, studio, or floor">
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="City">Ciudad</label>
-              <input type="text" value="" class="form-control" id="city" required>
+              <input type="text" value="" class="form-control" id="city" name="city" required>
               <div class="invalid-feedback">
                 Please enter City
               </div>
             </div>
             <div class="form-group col-md-4">
               <label for="State">Estado</label>
-              <select id="state" value="" class="form-control" required>
+              <select id="state" name="state" value="" class="form-control" required>
                 <option value="Nevada">Nevada</option>
                 <option value="Utah">Utah</option>
                 <option value="Arizona">Arizona</option>
@@ -135,7 +138,7 @@
             </div>
             <div class="form-group col-md-2">
               <label for="Zip">Código postal</label>
-              <input type="text" value="" class="form-control" id="zipCode" required>
+              <input type="text" value="" class="form-control" id="zipCode" name="zipCode" required>
               <div class="invalid-feedback">
                 Please enter City
               </div>

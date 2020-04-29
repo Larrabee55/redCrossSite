@@ -3,31 +3,37 @@
 
 <head>
   <meta charset="UTF-8">
+
+  <link rel="shortcut icon" href="#" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
   <link href="./css/style.css" rel="stylesheet" type="text/css">
 
-  <title>Red Cross Info</title>
+  <title>Free Smoke Alarm</title>
 </head>
+<!-- test -->
 
 <body>
   <div class="container">
 
     <div class="row" id="pictures">
 
-      <img src="./images/installation.jpeg" width="33.3%">
+      <img src="./images/installation.jpeg" width="33.3%" height="100%">
 
-      <img src="./images/Workers.JPG" width="33.3%">
+      <img src="./images/Workers.JPG" width="33.3%" height="100%">
 
-      <img src="./images/installinfSmokeAlarm.JPG" width="33.3%">
+      <img src="./images/installinfSmokeAlarm.JPG" width="33.3%" height="100%">
 
     </div>
 
     <!-- logo -->
     <div class="row p-4" id="logo">
-      <div class="col-md-12 d-flex justify-content-end">
-        <a href="./spanishInfo.html">Español</a>
+      <div class="col-md-2" id="chapter">
+
+      </div>
+      <div class="col-md-10 d-flex justify-content-end">
+        <h5><a href="./spanishInfo.html">Español</a></h5>
       </div>
 
       <div class="col-md-12 text-center">
@@ -66,18 +72,18 @@
     <!-- form -->
     <div class="row p-4 shadow-lg" id="formInput">
       <div class="col-md-12">
-        <form class="needs-validation" action="contact.php" method="POST" id="infoAndScheduling" novalidate>
+        <form class="needs-validation" id="infoAndScheduling" action="contact.php" method="post" novalidate>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="FirstName" required>First Name</label>
-              <input type="text" value="" class="form-control" id="firstName" required>
+              <label for="FirstName">First Name</label>
+              <input type="text" value="" class="form-control" id="firstName" name="firstName" required>
               <div class="invalid-feedback">
                 Please enter Name
               </div>
             </div>
             <div class="form-group col-md-6">
               <label for="LastName">Last Name</label>
-              <input type="text" value="" class="form-control" id="lastName" required>
+              <input type="text" value="" class="form-control" id="lastName" name="lastName" maxlength="20" required>
               <div class="invalid-feedback">
                 Please enter Last Name
               </div>
@@ -86,14 +92,15 @@
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="phoneNumber">Phone Number</label>
-              <input type="phoneNumber" value="" class="form-control" id="phoneNumber" required>
+              <input type="phoneNumber" value="" class="form-control" id="phoneNumber" name="phoneNumber" maxlength="14"
+                required>
               <div class="invalid-feedback">
                 Please enter Phone number
               </div>
             </div>
             <div class="form-group col-md-6">
               <label for="Email">Email</label>
-              <input type="Email" value="" class="form-control" id="email" required>
+              <input type="Email" value="" class="form-control" id="email" name="email" maxlength="50" required>
               <div class="invalid-feedback">
                 Please enter Email
               </div>
@@ -101,26 +108,28 @@
           </div>
           <div class="form-group">
             <label for="Address">Address</label>
-            <input type="text" value="" class="form-control" id="address" placeholder="1234 Main St" required>
+            <input type="text" value="" class="form-control" id="address" name="address" placeholder="1234 Main St"
+              required>
             <div class="invalid-feedback">
               Please enter Address
             </div>
           </div>
           <div class="form-group">
             <label for="Address2">Address 2</label>
-            <input type="text" value="" class="form-control" id="address2" placeholder="Apartment, studio, or floor">
+            <input type="text" value="" class="form-control" id="address2" name="address2"
+              placeholder="Apartment, studio, or floor">
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="City">City</label>
-              <input type="text" value="" class="form-control" id="city" required>
+              <input type="text" value="" class="form-control" id="city" name="city" required>
               <div class="invalid-feedback">
                 Please enter City
               </div>
             </div>
             <div class="form-group col-md-4">
               <label for="State">State</label>
-              <select id="state" value="" class="form-control" required>
+              <select id="state" name="state" value="" class="form-control" required>
                 <option value="Nevada">Nevada</option>
                 <option value="Utah">Utah</option>
                 <option value="Arizona">Arizona</option>
@@ -132,7 +141,7 @@
             </div>
             <div class="form-group col-md-2">
               <label for="Zip">Zip</label>
-              <input type="text" value="" class="form-control" id="zipCode" required>
+              <input type="text" value="" class="form-control" id="zipCode" name="zipCode" required>
               <div class="invalid-feedback">
                 Please enter City
               </div>
@@ -162,38 +171,13 @@
       </div>
     </div>
 
-
-
-    <script>
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
-      (function () {
-        'use strict';
-        window.addEventListener('load', function () {
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          var forms = document.getElementsByClassName('needs-validation');
-          // Loop over them and prevent submission
-          var validation = Array.prototype.filter.call(forms, function (form) {
-            form.addEventListener('submit', function (event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add('was-validated');
-            }, false);
-          });
-        }, false);
-      })();
-    </script>
-
-
-
     <div class="row p-4 shadow-lg" id="HFCImpacts">
       <div class="col-md-12 text-center">
         <img src="./images/HFC Impacts to date.png" width="100%">
       </div>
     </div>
 
-
+    <!-- how to get involved -->
     <div class="row px-4 pt-4" id="HowToGetInvolved">
       <div class="col-md-12 text-center">
         <h1 id="RedCrossBlack"><b>How You Can Get Involved</b></h1>
@@ -201,7 +185,6 @@
           sponsor your commitment to help save lives.</h3>
       </div>
     </div>
-
     <div class="row p-5" id="HowToGetInvolved">
       <div class="col-md-4 text-center">
         <img src="./images/Volunteer2.png" alt="Volunteer" width="50%">
@@ -227,6 +210,27 @@
     </div>
 
   </div>
+  <!-- added scripts -->
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
   <script src="./js/bootstrap.min.js"></script>
